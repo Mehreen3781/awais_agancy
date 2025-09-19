@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TT Trendy Tribes — Products</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom small-shadow sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+          <span class="brand-badge">TT</span>
+          <span>Trendy Tribes</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="new.html">New Collection</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="bags.html">Bags</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a class="position-relative text-decoration-none" href="#cart" id="cartButton" aria-label="Cart">
+              <i class="bi bi-bag fs-4"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="cartCount">0</span>
+            </a>
+            <a href="signin.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-5 bg-gradient subtle-hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8" data-aos="fade-right">
+            <h1 class="display-5 fw-bold mb-2">Products</h1>
+            <p class="lead text-secondary mb-0">Your go-to store for the latest fashion, beauty & lifestyle trends. Stay stylish every day with Trendy Tribes.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" alt="Trendy" class="img-fluid rounded-4 shadow-sm d-none d-lg-block">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-3 border-bottom bg-white">
+      <div class="container">
+        <div class="row align-items-center g-2">
+          <div class="col-md-6" data-aos="fade-up">
+            <div class="input-group">
+              <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+              <input type="text" id="searchInput" class="form-control" placeholder="Search products, brands, categories...">
+            </div>
+          </div>
+          <div class="col-md-6 text-md-end" data-aos="fade-up" data-aos-delay="100">
+            <div class="btn-group filter-group" role="group" aria-label="Category filters">
+              <button class="btn btn-outline-secondary btn-sm active" data-filter="all">All</button>
+              <button class="btn btn-outline-secondary btn-sm" data-filter="Bags">Bags</button>
+              <button class="btn btn-outline-secondary btn-sm" data-filter="Lip Gloss">Lip Gloss</button>
+              <button class="btn btn-outline-secondary btn-sm" data-filter="Lawn Dresses">Lawn Dresses</button>
+              <button class="btn btn-outline-secondary btn-sm" data-filter="Face Serum">Face Serum</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main id="products" class="py-5">
+      <div class="container">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="h3 fw-bold mb-1">Products</h2>
+          <p class="text-secondary mb-0">Bags</p>
+        </div>
+
+        <div class="row g-4 mt-1">
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in">
+            <div class="card product-card" data-category="Bags" data-title="Fancy China Stainless Steel">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1584917865442-f9a7d7b2b1d5?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Bag">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Bags</span>
+                <h6 class="card-title">Fancy China Stainless Steel</h6>
+                <p class="card-text text-primary fw-semibold">PKR 800/-</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="Fancy China Stainless Steel"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="50">
+            <div class="card product-card" data-category="Bags" data-title="Fancy China Stainless Steel">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1559561853-08451507cbe5?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Bag">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Bags</span>
+                <h6 class="card-title">Fancy China Stainless Steel</h6>
+                <p class="card-text text-primary fw-semibold">PKR 800/-</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="Fancy China Stainless Steel"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card product-card" data-category="Bags" data-title="Fancy China Stainless Steel">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1547301579-2d5c26a2c989?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Bag">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Bags</span>
+                <h6 class="card-title">Fancy China Stainless Steel</h6>
+                <p class="card-text text-primary fw-semibold">PKR 800/-</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="Fancy China Stainless Steel"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+            <div class="card product-card" data-category="Bags" data-title="Fancy China Stainless Steel">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1560347876-aeef00ee58a1?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Bag">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Bags</span>
+                <h6 class="card-title">Fancy China Stainless Steel</h6>
+                <p class="card-text text-primary fw-semibold">PKR 800/-</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="Fancy China Stainless Steel"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-heading mt-5" data-aos="fade-up">
+          <h2 class="h3 fw-bold mb-1">Korien Products</h2>
+        </div>
+        <div class="row g-4 mt-1">
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in">
+            <div class="card product-card" data-category="Bags" data-title="Korien Ear Cuff Golden">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1520975979651-00138fc4d7e9?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Ear Cuff">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Bags</span>
+                <h6 class="card-title">Korien Ear Cuff Golden</h6>
+                <p class="card-text text-primary fw-semibold">PKR 1050</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="Korien Ear Cuff Golden"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="50">
+            <div class="card product-card" data-category="Bags" data-title="Korien Ear Cuff Sliver">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1604076947037-7ea3a1a11c23?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Ear Cuff">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Bags</span>
+                <h6 class="card-title">Korien Ear Cuff Sliver</h6>
+                <p class="card-text text-primary fw-semibold">PKR 480</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="Korien Ear Cuff Sliver"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card product-card" data-category="Lip Gloss" data-title="Korien Collection">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa3?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Lip Gloss">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Lip Gloss</span>
+                <h6 class="card-title">Korien Collection</h6>
+                <p class="card-text text-primary fw-semibold">PKR 480</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="Korien Collection"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+            <div class="card product-card" data-category="Lip Gloss" data-title="KorienCollection">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1611932583424-c6fb62004040?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Lip Gloss">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Lip Gloss</span>
+                <h6 class="card-title">KorienCollection</h6>
+                <p class="card-text text-primary fw-semibold">PKR 1000</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="KorienCollection"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-heading mt-5" id="brands" data-aos="fade-up">
+          <h2 class="h3 fw-bold mb-1">Brands Collection</h2>
+        </div>
+        <div class="row g-4 mt-1">
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in">
+            <div class="card product-card" data-category="Bags" data-title="AA Collection">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Bags">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Bags</span>
+                <h6 class="card-title">AA Collection</h6>
+                <p class="card-text text-primary fw-semibold">PKR 3000</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="AA Collection Bag"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="50">
+            <div class="card product-card" data-category="Lawn Dresses" data-title="Iqra Aziz">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Dress">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Lawn Dresses</span>
+                <h6 class="card-title">Iqra Aziz</h6>
+                <p class="card-text text-primary fw-semibold">PKR 3600</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="Iqra Aziz Lawn Dress"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card product-card" data-category="Lip Gloss" data-title="AA Collection">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1563170423-18f482d82cc8?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Lip Gloss">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Lip Gloss</span>
+                <h6 class="card-title">AA Collection</h6>
+                <p class="card-text text-primary fw-semibold">PKR 3000</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="AA Collection Lip Gloss"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+            <div class="card product-card" data-category="Face Serum" data-title="AA Collection">
+              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
+                <img src="https://images.unsplash.com/photo-1611932584617-015b8073d3a2?q=80&w=1000&auto=format&fit=crop" class="product-img" alt="Face Serum">
+              </div>
+              <div class="card-body">
+                <span class="badge bg-light text-dark mb-2">Face Serum</span>
+                <h6 class="card-title">AA Collection</h6>
+                <p class="card-text text-primary fw-semibold">PKR 3000</p>
+                <button class="btn btn-primary w-100 add-to-cart" data-product="AA Collection Face Serum"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="pt-5 pb-3 bg-dark text-light mt-auto">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h4 class="fw-bold mb-3">Trendy Tribes</h4>
+            <p class="mb-0 opacity-75">Your go-to store for the latest fashion, beauty & lifestyle trends. Stay stylish every day with Trendy Tribes.</p>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+            <h6 class="text-uppercase text-secondary small">Quick Links</h6>
+            <ul class="list-unstyled mb-0">
+              <li><a href="index.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Home</a></li>
+              <li><a href="products.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Products</a></li>
+              <li><a href="about.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">About</a></li>
+              <li><a href="contact.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <h6 class="text-uppercase text-secondary small">Follow Us</h6>
+            <div class="d-flex gap-3">
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary my-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small opacity-75">
+          <p class="mb-2 mb-md-0">© 2025 Trendy Tribes | Designed with ❤️</p>
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="link-light">Privacy</a>
+            <a href="#" class="link-light">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+      <div id="cartToast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            <i class="bi bi-bag-check me-2"></i>
+            Added to cart
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <button id="backToTop" class="btn btn-primary rounded-circle back-to-top" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+  
+</html>
+
+

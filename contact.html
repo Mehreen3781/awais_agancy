@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TT Trendy Tribes — Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom small-shadow sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+          <span class="brand-badge">TT</span>
+          <span>Trendy Tribes</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="new.html">New Collection</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="bags.html">Bags</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a class="position-relative text-decoration-none" href="#cart" id="cartButton" aria-label="Cart">
+              <i class="bi bi-bag fs-4"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="cartCount">0</span>
+            </a>
+            <a href="signin.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-5 subtle-hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7" data-aos="fade-right">
+            <h1 class="display-6 fw-bold mb-2">Contact Us</h1>
+            <p class="lead text-secondary mb-0">Questions or feedback? We’re here to help.</p>
+          </div>
+          <div class="col-lg-5 text-lg-end" data-aos="fade-left">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1200&auto=format&fit=crop" alt="Contact" class="img-fluid rounded-4 shadow-sm d-none d-lg-block">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="p-4 rounded-4 bg-light h-100 small-shadow">
+              <h2 class="h5 fw-bold">Send us a message</h2>
+              <form id="contactForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Subject</label>
+                    <input type="text" class="form-control" name="subject" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" name="message" rows="5" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="rounded-4 overflow-hidden small-shadow">
+              <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11610048863!2d72.74109938004284!3d33.684420199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf184e06a6f1%3A0x29c13956bc0867b!2sIslamabad!5e0!3m2!1sen!2sPK!4v1700000000000!5m2!1sen!2sPK" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="row g-3 mt-3">
+              <div class="col-md-4">
+                <div class="p-3 rounded-3 bg-light h-100">
+                  <i class="bi bi-geo-alt"></i>
+                  <div class="fw-semibold">Address</div>
+                  <div class="small text-secondary">Islamabad, Pakistan</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded-3 bg-light h-100">
+                  <i class="bi bi-envelope"></i>
+                  <div class="fw-semibold">Email</div>
+                  <div class="small text-secondary">support@trendytribes.com</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded-3 bg-light h-100">
+                  <i class="bi bi-telephone"></i>
+                  <div class="fw-semibold">Phone</div>
+                  <div class="small text-secondary">+92 300 0000000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="pt-5 pb-3 bg-dark text-light mt-auto">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h4 class="fw-bold mb-3">Trendy Tribes</h4>
+            <p class="mb-0 opacity-75">Your go-to store for the latest fashion, beauty & lifestyle trends. Stay stylish every day with Trendy Tribes.</p>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+            <h6 class="text-uppercase text-secondary small">Quick Links</h6>
+            <ul class="list-unstyled mb-0">
+              <li><a href="index.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Home</a></li>
+              <li><a href="products.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Products</a></li>
+              <li><a href="about.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">About</a></li>
+              <li><a href="contact.html" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <h6 class="text-uppercase text-secondary small">Follow Us</h6>
+            <div class="d-flex gap-3">
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary my-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small opacity-75">
+          <p class="mb-2 mb-md-0">© 2025 Trendy Tribes | Designed with ❤️</p>
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="link-light">Privacy</a>
+            <a href="#" class="link-light">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+      <div id="cartToast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            <i class="bi bi-bag-check me-2"></i>
+            Added to cart
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <button id="backToTop" class="btn btn-primary rounded-circle back-to-top" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+  
+</html>
+
+
