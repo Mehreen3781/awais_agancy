@@ -22,43 +22,63 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom small-shadow sticky-top">
-      <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-          <span class="brand-badge">AA</span>
-          <span>Awais Agancy</span>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #f8f9fa;"> <!-- light gray bg -->
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+     
+<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+  <img src="assets/images/logo.png" alt="Logo" style="height:50px; width:50px; object-fit:contain;">
+  <span class="fw-bold text-dark">Awais Agancy<sup>™</sup></span>
+</a>
+
+    <!-- Toggler (mobile menu button) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="new.html">New Collection</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="brands.html">Brands</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="bags.html">Bags</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Right side buttons/icons -->
+      <div class="d-flex align-items-center gap-3 ms-lg-3">
+        <a class="position-relative text-decoration-none text-dark" href="#cart" id="cartButton" aria-label="Cart">
+          <i class="bi bi-bag fs-4"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="cartCount">0</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="new.html">New Collection</a></li>
-            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
-            <li class="nav-item"><a class="nav-link" href="bags.html">Bags</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
-          <div class="d-flex align-items-center gap-3">
-            <a class="position-relative text-decoration-none" href="#cart" id="cartButton" aria-label="Cart">
-              <i class="bi bi-bag fs-4"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="cartCount">0</span>
-            </a>
-            <a href="signin.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">Sign In</a>
-          </div>
-        </div>
+        <a href="signin.html" class="btn btn-outline-dark btn-sm rounded-pill px-3">Sign In</a>
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
+
+
+
+
 
     <!-- Hero -->
     <header class="py-5 subtle-hero">
       <div class="container">
         <div class="row align-items-center g-4">
           <div class="col-lg-7" data-aos="fade-right">
-            <span class="badge text-bg-primary mb-3">Awais Agancy</span>
+            <span class="badge text-bg-primary mb-3">Awais Agancy<sup>™</sup></span>
+</a>
             <h1 class="display-5 fw-bold mb-3">Stay stylish every day</h1>
-            <p class="lead text-secondary">Discover the latest fashion, beauty & lifestyle picks — thoughtfully curated for your everyday vibe.</p>
+<p class="lead text-secondary">
+  Dropshipping, Wholeselling, eBay, Amazon, Create Accounts, International Trading, 50/50 Profit.
+</p>
+            
+
+
             <div class="d-flex gap-3 mt-3">
               <a href="products.html" class="btn btn-primary btn-lg">Shop Products</a>
               <a href="new.html" class="btn btn-outline-primary btn-lg">New Arrivals</a>
