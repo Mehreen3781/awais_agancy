@@ -26,6 +26,9 @@ img { display:block; max-width:100%; height:auto }
 .hero-content { max-width: 1100px; margin: 0 auto; display:grid; grid-template-columns: 1.2fr 1fr; gap:30px; align-items:center; }
 .intro h1 { font-size: clamp(28px, 4vw, 48px); margin:0 0 10px; }
 .intro p { color: var(--muted); margin:0 0 16px }
+.intro p.lead { color:#111827; font-size: 1.1rem; font-weight: 500 }
+.hero-points { margin: 0 0 14px; padding-left: 18px; color:#374151 }
+.hero-points li { margin: 4px 0 }
 .btn { display:inline-block; padding:10px 16px; border-radius:10px; border:1px solid #2a3240; }
 .btn.primary { background: linear-gradient(90deg, var(--brand), var(--brand-2)); color:#fff; border:none }
 .intro-media { position:relative }
