@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css" />
-  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
   <style>
     .product-page { max-width:1100px; margin:30px auto; padding:0 20px; }
     .product-layout { display:grid; grid-template-columns: 1.2fr 1fr; gap:24px }
@@ -29,8 +29,8 @@
 <body>
   <header class="navbar">
     <div class="nav-left">
-      <a href="/">
-        <img src="/assets/giftbox.svg" alt="Gift box" class="logo giftmark" />
+      <a href="index.html">
+        <img src="assets/giftbox.svg" alt="Gift box" class="logo giftmark" />
       </a>
       <div class="brand">Awase Agency8<sup>TM</sup></div>
     </div>
@@ -76,7 +76,7 @@
   </footer>
 
   <script type="module">
-    import { getProducts } from '/js/data.js';
+    import { getProducts } from './js/data.js';
 
     const url = new URL(window.location.href);
     const id = url.searchParams.get('id');
@@ -154,6 +154,7 @@
       } else if (source) {
         const img = document.createElement('img');
         img.src = source;
+        img.onerror = () => { img.src = 'assets/placeholder.svg'; };
         img.alt = product.name;
         main.appendChild(img);
       }
@@ -166,7 +167,7 @@
     allSlides.forEach((src, i) => {
       if (src.endsWith('.mp4')) {
         const vthumb = document.createElement('img');
-        vthumb.src = slides[0] || '/assets/placeholder.svg';
+        vthumb.src = slides[0] || 'assets/placeholder.svg';
         vthumb.alt = 'Video';
         vthumb.title = 'Play video';
         vthumb.addEventListener('click', () => { activeIndex = i; renderMain(activeIndex); });
@@ -185,7 +186,7 @@
     document.getElementById('addCart').addEventListener('click', () => addToCart(product));
     loadCartCount();
   </script>
-  <script src="/js/nav.js" type="module"></script>
+  <script src="js/nav.js" type="module"></script>
 </body>
 </html>
 

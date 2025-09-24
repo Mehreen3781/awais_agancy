@@ -7,14 +7,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css" />
-  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
 </head>
 <body>
   <!-- Navbar -->
   <header class="navbar">
     <div class="nav-left">
-      <img src="/assets/giftbox.svg" alt="Gift box" class="logo giftmark" />
+      <img src="assets/giftbox.svg" alt="Gift box" class="logo giftmark" />
       <div class="brand">Awase Agency8<sup>TM</sup></div>
     </div>
     <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
@@ -48,8 +48,8 @@
         <a href="#products" class="btn primary">Explore Products</a>
       </div>
       <div class="intro-media">
-        <img src="/assets/intro.svg" alt="Client intro" class="intro-img float" />
-        <img src="/assets/giftbox.svg" alt="Gift box logo" class="gift pulse" />
+        <img src="assets/intro.svg" alt="Client intro" class="intro-img float" onerror="this.src='assets/placeholder.svg'" />
+        <img src="assets/giftbox.svg" alt="Gift box logo" class="gift pulse" />
       </div>
     </div>
   </section>
@@ -83,8 +83,9 @@
     <div class="copy">© <span id="year"></span> Awase Agency8<sup>TM</sup>. All rights reserved.</div>
   </footer>
 
-  <script src="/js/data.js" type="module"></script>
-  <script src="/js/main.js" type="module"></script>
+  <script src="js/data.js" type="module"></script>
+  <script src="js/main.js" type="module"></script>
+  <script src="js/nav.js" type="module"></script>
   <script src="/js/nav.js" type="module"></script>
 </body>
 </html>

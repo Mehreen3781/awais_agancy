@@ -15,7 +15,7 @@ function loadCartCount() {
 
 function addToCart(product) {
   const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-  const firstImage = product.images?.[0] || '/assets/placeholder.svg';
+  const firstImage = product.images?.[0] || 'assets/placeholder.svg';
   const priceAmount = (product.price && typeof product.price.amount === 'number') ? product.price.amount : (typeof product.priceGBP === 'number' ? product.priceGBP : 0);
   const currency = (product.price && product.price.currency) ? product.price.currency : (typeof product.priceGBP === 'number' ? 'GBP' : '');
   cart.push({ productId: product.id, name: product.name, image: firstImage, price: priceAmount, currency, ts: Date.now() });
