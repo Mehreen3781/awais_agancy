@@ -1,302 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AA Awais Agancy — Home</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-    <!-- AOS Animations -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- App Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-      .navbar-brand img {
-  background-color: inherit; /* nav ka background le lega */
-}
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg" style="background-color: #f8f9fa;"> <!-- light gray bg -->
-  <div class="container">
-    <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-     
-<!-- <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-  <img src="Untitled design (2).png" alt="Logo" style="height:60px; width:600px; object-fit:contain; background:transparent;">
-</a> -->
-
-
-<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-  <img src="IMG-20250916-WA0001(1).jpg" alt="Logo" style="height:50px; width:50px; object-fit:contain ;border-radius: 50%; ">
-  <span class="fw-bold text-dark">Awais Agancy<sup>™</sup></span> 
-</a>
-
-    <!-- Toggler (mobile menu button) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Menu Links -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="products.html">Products</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="new.html">New Collection</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="brands.html">Brands</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="bags.html">Bags</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awase Agency8™ | Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="/assets/logo.svg" alt="Awase Agency8 logo" class="logo" />
+      <div class="brand">Awase Agency8<sup>TM</sup></div>
+    </div>
+    <nav class="nav-right">
+      <ul>
+        <li><a class="active" href="/index.html">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#uk-products">UK Products</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+      <a href="#cart" class="cart-link" aria-label="Cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-badge" id="cartCount">0</span>
+      </a>
+    </nav>
+  </header>
 
-      <!-- Right side buttons/icons -->
-      <div class="d-flex align-items-center gap-3 ms-lg-3">
-        <a class="position-relative text-decoration-none text-dark" href="#cart" id="cartButton" aria-label="Cart">
-          <i class="bi bi-bag fs-4"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="cartCount">0</span>
-        </a>
-        <a href="signin.html" class="btn btn-outline-dark btn-sm rounded-pill px-3">Sign In</a>
+  <!-- Hero / Intro -->
+  <section class="hero" id="shop">
+    <div class="hero-content">
+      <div class="intro">
+        <h1>Premium Gifts, Curated with Care</h1>
+        <p>
+          High-quality products and gift boxes with the Awase Agency8<sup>TM</sup> touch.
+          Fast shipping, secure checkout, and unbeatable service.
+        </p>
+        <a href="#products" class="btn primary">Explore Products</a>
+      </div>
+      <div class="intro-media">
+        <img src="/assets/intro.svg" alt="Client intro" class="intro-img float" />
+        <img src="/assets/giftbox.svg" alt="Gift box logo" class="gift pulse" />
       </div>
     </div>
-  </div>
-</nav>
+  </section>
 
+  <!-- Products Grid -->
+  <main class="container" id="products">
+    <h2>Featured Products</h2>
+    <div id="productsGrid" class="grid"></div>
+  </main>
 
+  <section class="container" id="uk-products">
+    <h2>UK Products</h2>
+    <p class="muted">Explore our curated UK collection.</p>
+  </section>
 
-
-
-    <!-- Hero -->
-    <header class="py-5 subtle-hero">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-7" data-aos="fade-right">
-            <span class="badge text-bg-primary mb-3">Awais Agancy<sup>™</sup></span>
-</a>
-            <h1 class="display-5 fw-bold mb-3">Stay stylish every day</h1>
-<p class="lead text-secondary">
-  Dropshipping, Wholeselling, eBay, Amazon, Create Accounts, International Trading, 50/50 Profit.
-</p>
-            
-
-
-            <div class="d-flex gap-3 mt-3">
-              <a href="products.html" class="btn btn-primary btn-lg">Shop Products</a>
-              <a href="new.html" class="btn btn-outline-primary btn-lg">New Arrivals</a>
-            </div>
-          </div>
-          <div class="col-lg-5 text-lg-end" data-aos="fade-left">
-            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" alt="Hero" class="img-fluid rounded-4 shadow-sm d-none d-lg-block">
-          </div>
-        </div>
+  <!-- Contact -->
+  <footer id="contact" class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Contact</h3>
+        <p>Email: hello@awase-agency8.example</p>
+        <p>Phone: +44 20 7946 0123</p>
       </div>
-    </header>
-
-    <!-- Categories -->
-    <section class="py-5">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-3" data-aos="fade-up">
-          <h2 class="h4 fw-bold mb-0">Shop by Category</h2>
-          <a href="products.html" class="btn btn-link">View all</a>
-        </div>
-        <div class="row g-4">
-          <div class="col-6 col-md-3" data-aos="zoom-in">
-            <a class="text-decoration-none" href="bags.html">
-              <div class="card product-card">
-                <div class="ratio ratio-4x3 overflow-hidden rounded-top">
-                  <img class="product-img" src="https://images.unsplash.com/photo-1560347876-aeef00ee58a1?q=80&w=1000&auto=format&fit=crop" alt="Bags">
-                </div>
-                <div class="card-body">
-                  <h6 class="mb-0">Bags</h6>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="50">
-            <a class="text-decoration-none" href="products.html">
-              <div class="card product-card">
-                <div class="ratio ratio-4x3 overflow-hidden rounded-top">
-                  <img class="product-img" src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa3?q=80&w=1000&auto=format&fit=crop" alt="Lip Gloss">
-                </div>
-                <div class="card-body">
-                  <h6 class="mb-0">Lip Gloss</h6>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <a class="text-decoration-none" href="products.html">
-              <div class="card product-card">
-                <div class="ratio ratio-4x3 overflow-hidden rounded-top">
-                  <img class="product-img" src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=1000&auto=format&fit=crop" alt="Lawn">
-                </div>
-                <div class="card-body">
-                  <h6 class="mb-0">Lawn Dresses</h6>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="150">
-            <a class="text-decoration-none" href="products.html">
-              <div class="card product-card">
-                <div class="ratio ratio-4x3 overflow-hidden rounded-top">
-                  <img class="product-img" src="https://images.unsplash.com/photo-1611932584617-015b8073d3a2?q=80&w=1000&auto=format&fit=crop" alt="Serum">
-                </div>
-                <div class="card-body">
-                  <h6 class="mb-0">Face Serum</h6>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Products -->
-    <main class="py-5">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-3" data-aos="fade-up">
-          <h2 class="h4 fw-bold mb-0">Featured</h2>
-          <a class="btn btn-link" href="products.html">Shop all</a>
-        </div>
-        <div class="row g-4">
-          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in">
-            <div class="card product-card" data-category="Bags" data-title="Compact Crossbody">
-              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
-                <img class="product-img" src="https://images.unsplash.com/photo-1559561853-08451507cbe5?q=80&w=1000&auto=format&fit=crop" alt="Compact Crossbody">
-              </div>
-              <div class="card-body">
-                <span class="badge bg-light text-dark mb-2">Bags</span>
-                <h6 class="card-title">Compact Crossbody</h6>
-                <p class="card-text text-primary fw-semibold">PKR 3500</p>
-                <button class="btn btn-primary w-100 add-to-cart" data-product="Compact Crossbody"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="50">
-            <div class="card product-card" data-category="Lip Gloss" data-title="Velvet Lip Tint">
-              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
-                <img class="product-img" src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa3?q=80&w=1000&auto=format&fit=crop" alt="Velvet Lip Tint">
-              </div>
-              <div class="card-body">
-                <span class="badge bg-light text-dark mb-2">Lip Gloss</span>
-                <h6 class="card-title">Velvet Lip Tint</h6>
-                <p class="card-text text-primary fw-semibold">PKR 1200</p>
-                <button class="btn btn-primary w-100 add-to-cart" data-product="Velvet Lip Tint"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card product-card" data-category="Lawn Dresses" data-title="Summer Lawn 3PC">
-              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
-                <img class="product-img" src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=1000&auto=format&fit=crop" alt="Summer Lawn 3PC">
-              </div>
-              <div class="card-body">
-                <span class="badge bg-light text-dark mb-2">Lawn Dresses</span>
-                <h6 class="card-title">Summer Lawn 3PC</h6>
-                <p class="card-text text-primary fw-semibold">PKR 4600</p>
-                <button class="btn btn-primary w-100 add-to-cart" data-product="Summer Lawn 3PC"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
-            <div class="card product-card" data-category="Face Serum" data-title="Glow Serum">
-              <div class="ratio ratio-4x3 overflow-hidden rounded-top">
-                <img class="product-img" src="https://images.unsplash.com/photo-1611932584617-015b8073d3a2?q=80&w=1000&auto=format&fit=crop" alt="Glow Serum">
-              </div>
-              <div class="card-body">
-                <span class="badge bg-light text-dark mb-2">Face Serum</span>
-                <h6 class="card-title">Glow Serum</h6>
-                <p class="card-text text-primary fw-semibold">PKR 2200</p>
-                <button class="btn btn-primary w-100 add-to-cart" data-product="Glow Serum"><i class="bi bi-bag-plus me-2"></i>Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Brand marquee -->
-        <div class="mt-5" data-aos="fade-up">
-          <div class="d-flex align-items-center gap-3 flex-wrap">
-            <span class="text-uppercase small text-secondary">Trusted by</span>
-            <span class="fw-semibold">AA Collection</span>
-            <span class="fw-semibold">Korien</span>
-            <span class="fw-semibold">Iqra Aziz</span>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="pt-5 pb-3 bg-dark text-light mt-auto">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h4 class="fw-bold mb-3">Awais Agancy</h4>
-            <p class="mb-0 opacity-75">Your go-to store for the latest fashion, beauty & lifestyle trends. Stay stylish every day with Trendy Tribes.</p>
-          </div>
-          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-            <h6 class="text-uppercase text-secondary small">Quick Links</h6>
-            <ul class="list-unstyled mb-0">
-              <li><a href="#" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Home</a></li>
-              <li><a href="#products" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Products</a></li>
-              <li><a href="#about" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">About</a></li>
-              <li><a href="#contact" class="link-light link-underline-opacity-0 link-underline-opacity-100-hover">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <h6 class="text-uppercase text-secondary small">Follow Us</h6>
-            <div class="d-flex gap-3">
-              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-              <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-        <hr class="border-secondary my-4">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small opacity-75">
-          <p class="mb-2 mb-md-0">© 2025 Awais Agancy | Designed with ❤️</p>
-          <div class="d-flex align-items-center gap-3">
-            <a href="#" class="link-light">Privacy</a>
-            <a href="#" class="link-light">Terms</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Toast -->
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
-      <div id="cartToast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite" aria-atomic="true">
-        <div class="d-flex">
-          <div class="toast-body">
-            <i class="bi bi-bag-check me-2"></i>
-            Added to cart
-          </div>
-          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
+      <div>
+        <h3>Follow</h3>
+        <p>
+          <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">X</a>
+        </p>
       </div>
     </div>
+    <div class="copy">© <span id="year"></span> Awase Agency8<sup>TM</sup>. All rights reserved.</div>
+  </footer>
 
-    <!-- Back To Top -->
-    <button id="backToTop" class="btn btn-primary rounded-circle back-to-top" aria-label="Back to top">
-      <i class="bi bi-arrow-up"></i>
-    </button>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="assets/js/app.js"></script>
-  </body>
-  
+  <script src="/js/data.js" type="module"></script>
+  <script src="/js/main.js" type="module"></script>
+</body>
 </html>
-
 

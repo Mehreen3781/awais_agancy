@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Details | Awase Agency8</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+  <style>
+    .product-page { max-width:1100px; margin:30px auto; padding:0 20px; }
+    .product-layout { display:grid; grid-template-columns: 1.2fr 1fr; gap:24px }
+    .slider { background:#0e1217; border:1px solid #202633; border-radius:14px; overflow:hidden }
+    .slider-main { position:relative; height:420px; display:grid; place-items:center }
+    .slider-main img, .slider-main video { width:100%; height:100%; object-fit:cover }
+    .slider-thumbs { display:flex; gap:10px; padding:10px; overflow-x:auto; border-top:1px solid #202633 }
+    .slider-thumbs img { width:70px; height:70px; object-fit:cover; border-radius:8px; border:1px solid #202633; cursor:pointer; opacity:.7 }
+    .slider-thumbs img.active { outline:2px solid var(--brand); opacity:1 }
+    .product-info { background:var(--card); border:1px solid #202633; border-radius:14px; padding:16px }
+    .product-info h1 { margin:6px 0 10px }
+    .badges { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 }
+    .badge { padding:4px 8px; border-radius:999px; border:1px solid #2a3240; color: var(--muted) }
+    .cta { display:flex; gap:10px; margin-top:12px }
+    @media (max-width: 860px) { .product-layout { grid-template-columns: 1fr } .slider-main { height:300px } }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="/">
+        <img src="/assets/logo.svg" alt="Awase Agency8 logo" class="logo" />
+      </a>
+      <div class="brand">Awase Agency8<sup>TM</sup></div>
+    </div>
+    <nav class="nav-right">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/index.html#shop">Shop</a></li>
+        <li><a href="/index.html#uk-products">UK Products</a></li>
+        <li><a href="/index.html#products">Products</a></li>
+        <li><a href="/index.html#contact">Contact</a></li>
+      </ul>
+      <a href="#cart" class="cart-link" aria-label="Cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-badge" id="cartCount">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="product-page">
+    <div class="product-layout">
+      <div class="slider" id="slider">
+        <div class="slider-main" id="sliderMain"></div>
+        <div class="slider-thumbs" id="sliderThumbs"></div>
+      </div>
+      <div class="product-info">
+        <div class="muted">Product</div>
+        <h1 id="pTitle">Loading...</h1>
+        <div class="price" id="pPrice">£0.00</div>
+        <div class="badges" id="pTags"></div>
+        <p id="pDetails" class="muted"></p>
+        <div class="cta">
+          <button class="btn primary" id="addCart">Add to Cart</button>
+          <a class="btn ghost" href="/index.html">Back to Shop</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="copy">© <span id="year"></span> Awase Agency8<sup>TM</sup></div>
+  </footer>
+
+  <script type="module">
+    import { getProducts } from '/js/data.js';
+
+    const url = new URL(window.location.href);
+    const id = url.searchParams.get('id');
+    const yearSpan = document.getElementById('year');
+    const cartCount = document.getElementById('cartCount');
+    yearSpan.textContent = String(new Date().getFullYear());
+
+    function loadCartCount() {
+      try {
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        cartCount.textContent = String(cart.length);
+      } catch { cartCount.textContent = '0'; }
+    }
+
+    function addToCart(productId) {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      cart.push({ productId, ts: Date.now() });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      loadCartCount();
+    }
+
+    const list = await getProducts();
+    const product = list.find(p => p.id === id) || list[0];
+
+    // Bind product info
+    document.getElementById('pTitle').textContent = product.name;
+    document.getElementById('pPrice').textContent = `£${product.priceGBP.toFixed(2)}`;
+    document.getElementById('pDetails').textContent = product.details;
+    const tags = document.getElementById('pTags');
+    product.tags?.forEach(t => {
+      const s = document.createElement('span');
+      s.className = 'badge';
+      s.textContent = t;
+      tags.appendChild(s);
+    });
+
+    // Slider
+    const main = document.getElementById('sliderMain');
+    const thumbs = document.getElementById('sliderThumbs');
+    const slides = [...(product.images || [])];
+    const video = product.video;
+    let activeIndex = 0;
+
+    function renderMain(index) {
+      main.innerHTML = '';
+      const source = slides[index];
+      if (source && source.endsWith('.mp4')) {
+        const v = document.createElement('video');
+        v.src = source;
+        v.controls = true;
+        v.autoplay = false;
+        main.appendChild(v);
+      } else if (source) {
+        const img = document.createElement('img');
+        img.src = source;
+        img.alt = product.name;
+        main.appendChild(img);
+      }
+      [...thumbs.children].forEach((c, i) => c.classList.toggle('active', i === index));
+    }
+
+    // Build thumbs with images + a video thumb at the end
+    const allSlides = [...slides];
+    if (video) allSlides.push(video);
+    allSlides.forEach((src, i) => {
+      if (src.endsWith('.mp4')) {
+        const vthumb = document.createElement('img');
+        vthumb.src = slides[0] || '/assets/placeholder.svg';
+        vthumb.alt = 'Video';
+        vthumb.title = 'Play video';
+        vthumb.addEventListener('click', () => { activeIndex = i; renderMain(activeIndex); });
+        thumbs.appendChild(vthumb);
+      } else {
+        const t = document.createElement('img');
+        t.src = src;
+        t.alt = product.name + ' thumbnail';
+        t.addEventListener('click', () => { activeIndex = i; renderMain(activeIndex); });
+        thumbs.appendChild(t);
+      }
+    });
+    // Initialize with first slide
+    slides.length ? renderMain(0) : (main.textContent = 'No media');
+
+    document.getElementById('addCart').addEventListener('click', () => addToCart(product.id));
+    loadCartCount();
+  </script>
+</body>
+</html>
+
