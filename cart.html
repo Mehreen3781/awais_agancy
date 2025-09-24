@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Cart | Awase Agency8</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <style>
+    .cart-page { max-width: 900px; margin: 30px auto; padding: 0 20px }
+    .cart-item { display:flex; align-items:center; gap:14px; background: #ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:10px; margin-bottom:10px }
+    .cart-item img { width:72px; height:72px; object-fit:cover; border-radius:10px; border:1px solid #e5e7eb }
+    .cart-item .meta { flex: 1 }
+    .cart-item .name { font-weight:700 }
+    .cart-item .price { color:#111827; font-weight:800 }
+    .cart-total { display:flex; justify-content:space-between; align-items:center; margin-top:16px; padding-top:10px; border-top:1px solid #e5e7eb }
+    .empty { color:#6b7280 }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="assets/giftbox.svg" alt="Gift box" class="logo giftmark" />
+      </a>
+      <div class="brand">Awase Agency8<sup>TM</sup></div>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav class="nav-right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="new.html">New Collection</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="bags.html">Bags</a></li>
+        <li><a class="contact-link" href="contact.html">Contact</a></li>
+      </ul>
+      <a href="cart.html" class="cart-link" aria-label="Cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-badge" id="cartCount">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="cart-page">
+    <h1>Your Cart</h1>
+    <div id="cartItems"></div>
+    <div class="cart-total">
+      <div class="muted">Total</div>
+      <div id="cartTotal" class="price">£0.00</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="copy">© <span id="year"></span> Awase Agency8<sup>TM</sup></div>
+  </footer>
+
+  <script type="module">
+    const yearSpan = document.getElementById('year');
+    const cartCount = document.getElementById('cartCount');
+    const container = document.getElementById('cartItems');
+    const totalEl = document.getElementById('cartTotal');
+    yearSpan.textContent = String(new Date().getFullYear());
+
+    function symbol(currency) {
+      switch ((currency || '').toUpperCase()) {
+        case 'USD': return '$';
+        case 'GBP': return '£';
+        case 'EUR': return '€';
+        default: return '';
+      }
+    }
+
+    function loadCart() {
+      try { return JSON.parse(localStorage.getItem('cart') || '[]'); } catch { return []; }
+    }
+
+    function saveCart(cart) { localStorage.setItem('cart', JSON.stringify(cart)); }
+
+    function removeAt(index) {
+      const cart = loadCart();
+      cart.splice(index, 1);
+      saveCart(cart);
+      render();
+    }
+
+    function render() {
+      const cart = loadCart();
+      cartCount.textContent = String(cart.length);
+      container.innerHTML = '';
+      if (!cart.length) {
+        const empty = document.createElement('div');
+        empty.className = 'empty';
+        empty.textContent = 'Your cart is empty.';
+        container.appendChild(empty);
+        totalEl.textContent = '£0.00';
+        return;
+      }
+      let total = 0;
+      cart.forEach((item, idx) => {
+        const price = Number(item.price || 0);
+        total += price;
+        const wrap = document.createElement('div');
+        wrap.className = 'cart-item';
+        const img = document.createElement('img');
+        img.src = item.image || 'assets/placeholder.svg';
+        img.alt = item.name || 'item';
+        img.onerror = () => { img.src = 'assets/placeholder.svg'; };
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        const name = document.createElement('div');
+        name.className = 'name';
+        name.textContent = item.name || item.productId;
+        const priceEl = document.createElement('div');
+        priceEl.className = 'price';
+        priceEl.textContent = `${symbol(item.currency)}${price.toFixed(2)}`;
+        const removeBtn = document.createElement('button');
+        removeBtn.className = 'btn ghost';
+        removeBtn.textContent = 'Remove';
+        removeBtn.addEventListener('click', () => removeAt(idx));
+        meta.appendChild(name);
+        meta.appendChild(priceEl);
+        wrap.appendChild(img);
+        wrap.appendChild(meta);
+        wrap.appendChild(removeBtn);
+        container.appendChild(wrap);
+      });
+      // Default total currency display in GBP if mixed; simple sum
+      totalEl.textContent = `£${total.toFixed(2)}`;
+    }
+
+    render();
+  </script>
+  <script src="js/nav.js" type="module"></script>
+</body>
+</html>
+

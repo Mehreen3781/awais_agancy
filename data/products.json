@@ -66,7 +66,7 @@
     "price": { "amount": 0, "currency": "USD" },
     "short": "Large assorted milk chocolate candy jar.",
     "images": [
-      "/assets/products/mms-jar/1.jpg"
+      "assets/products/mms-jar/1.jpg"
     ],
     "video": "",
     "details": "Imported assortment suitable for gifting and bulk use.",
@@ -79,7 +79,7 @@
     "price": { "amount": 0, "currency": "USD" },
     "short": "High-efficiency detergent for sportswear.",
     "images": [
-      "/assets/products/active-detergent/1.jpg"
+      "assets/products/active-detergent/1.jpg"
     ],
     "video": "",
     "details": "Enzyme-based formula, great for gym and outdoor clothing.",
@@ -92,7 +92,7 @@
     "price": { "amount": 0, "currency": "USD" },
     "short": "Replacement charging cable set.",
     "images": [
-      "/assets/products/garmin-charger/1.jpg"
+      "assets/products/garmin-charger/1.jpg"
     ],
     "video": "",
     "details": "USB charging cables compatible with select Garmin models.",
@@ -105,7 +105,7 @@
     "price": { "amount": 0, "currency": "USD" },
     "short": "Impact screwdriver bits – tamper proof.",
     "images": [
-      "/assets/products/torx-bit-set/1.jpg"
+      "assets/products/torx-bit-set/1.jpg"
     ],
     "video": "",
     "details": "Precision machined bits for electronics and repairs.",
@@ -118,7 +118,7 @@
     "price": { "amount": 0, "currency": "USD" },
     "short": "Hydrocolloid acne stickers for blemishes.",
     "images": [
-      "/assets/products/pimple-patches/1.jpg"
+      "assets/products/pimple-patches/1.jpg"
     ],
     "video": "",
     "details": "Invisible spot treatment in assorted sizes.",
@@ -131,7 +131,7 @@
     "price": { "amount": 0, "currency": "USD" },
     "short": "Easy-clean pet waste scooper.",
     "images": [
-      "/assets/products/pooper-scooper/1.jpg"
+      "assets/products/pooper-scooper/1.jpg"
     ],
     "video": "",
     "details": "Durable stainless construction for outdoor use.",
@@ -144,7 +144,7 @@
     "price": { "amount": 0, "currency": "USD" },
     "short": "See listing for details.",
     "images": [
-      "/assets/products/unknown-b0f2m57ykv/1.jpg"
+      "assets/products/unknown-b0f2m57ykv/1.jpg"
     ],
     "video": "",
     "details": "US/UK international trading item.",
