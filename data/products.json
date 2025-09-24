@@ -1,0 +1,155 @@
+[
+  {
+    "id": "p1001",
+    "name": "Deluxe Gift Hamper",
+    "priceGBP": 49.99,
+    "short": "Premium snacks and treats in a keepsake box.",
+    "images": [
+      "/assets/products/hamper/1.jpg",
+      "/assets/products/hamper/2.jpg",
+      "/assets/products/hamper/3.jpg",
+      "/assets/products/hamper/4.jpg",
+      "/assets/products/hamper/5.jpg"
+    ],
+    "video": "/assets/products/hamper/demo.mp4",
+    "details": "A curated selection of artisan snacks, chocolates, and beverages, beautifully packed for gifting.",
+    "tags": ["gift", "uk", "popular"]
+  },
+  {
+    "id": "p1002",
+    "name": "UK Tea Collection",
+    "priceGBP": 24.50,
+    "short": "Fine British teas with a porcelain cup.",
+    "images": [
+      "/assets/products/tea/1.jpg",
+      "/assets/products/tea/2.jpg",
+      "/assets/products/tea/3.jpg",
+      "/assets/products/tea/4.jpg"
+    ],
+    "video": "/assets/products/tea/demo.mp4",
+    "details": "Explore classic blends from the UK with tasting notes and brewing guide.",
+    "tags": ["uk", "tea"]
+  },
+  {
+    "id": "p1003",
+    "name": "Aroma Candle Set",
+    "priceGBP": 18.00,
+    "short": "Scented candles for calm evenings.",
+    "images": [
+      "/assets/products/candle/1.jpg",
+      "/assets/products/candle/2.jpg",
+      "/assets/products/candle/3.jpg",
+      "/assets/products/candle/4.jpg"
+    ],
+    "video": "/assets/products/candle/demo.mp4",
+    "details": "Long-lasting soy wax candles with essential oils.",
+    "tags": ["home", "relax"]
+  },
+  {
+    "id": "p1004",
+    "name": "Luxury Chocolate Box",
+    "priceGBP": 29.95,
+    "short": "Handcrafted truffles and pralines.",
+    "images": [
+      "/assets/products/choco/1.jpg",
+      "/assets/products/choco/2.jpg",
+      "/assets/products/choco/3.jpg",
+      "/assets/products/choco/4.jpg"
+    ],
+    "video": "/assets/products/choco/demo.mp4",
+    "details": "Single-origin cocoa with unique flavor profiles.",
+    "tags": ["gift", "chocolate"]
+  },
+  {
+    "id": "amz-mms-jar",
+    "name": "Assorted Chocolate Candy Jar (Approx 62 oz)",
+    "price": { "amount": 0, "currency": "USD" },
+    "short": "Large assorted milk chocolate candy jar.",
+    "images": [
+      "assets/products/mms-jar/1.jpg"
+    ],
+    "video": "",
+    "details": "Imported assortment suitable for gifting and bulk use.",
+    "tags": ["usa", "candy"],
+    "externalUrl": "https://www.amazon.com/dp/B0DDCJMFDD"
+  },
+  {
+    "id": "amz-active-detergent",
+    "name": "Active Wear Laundry Detergent (Performance)",
+    "price": { "amount": 0, "currency": "USD" },
+    "short": "High-efficiency detergent for sportswear.",
+    "images": [
+      "assets/products/active-detergent/1.jpg"
+    ],
+    "video": "",
+    "details": "Enzyme-based formula, great for gym and outdoor clothing.",
+    "tags": ["usa", "detergent"],
+    "externalUrl": "https://www.amazon.com/dp/B07L8NJY8W"
+  },
+  {
+    "id": "amz-garmin-charger",
+    "name": "Compatible Charger Cable for Garmin Watch (2-Pack)",
+    "price": { "amount": 0, "currency": "USD" },
+    "short": "Replacement charging cable set.",
+    "images": [
+      "assets/products/garmin-charger/1.jpg"
+    ],
+    "video": "",
+    "details": "USB charging cables compatible with select Garmin models.",
+    "tags": ["electronics", "accessory"],
+    "externalUrl": "https://www.amazon.com/dp/B09MG7535B"
+  },
+  {
+    "id": "amz-torx-bit-set",
+    "name": "25-Piece Security Torx Bit Set",
+    "price": { "amount": 0, "currency": "USD" },
+    "short": "Impact screwdriver bits – tamper proof.",
+    "images": [
+      "assets/products/torx-bit-set/1.jpg"
+    ],
+    "video": "",
+    "details": "Precision machined bits for electronics and repairs.",
+    "tags": ["tools", "diy"],
+    "externalUrl": "https://www.amazon.com/dp/B0CYGQBXXK"
+  },
+  {
+    "id": "amz-pimple-patches",
+    "name": "Hydrocolloid Pimple Patches (Bulk Pack)",
+    "price": { "amount": 0, "currency": "USD" },
+    "short": "Hydrocolloid acne stickers for blemishes.",
+    "images": [
+      "assets/products/pimple-patches/1.jpg"
+    ],
+    "video": "",
+    "details": "Invisible spot treatment in assorted sizes.",
+    "tags": ["beauty", "skincare"],
+    "externalUrl": "http://amazon.com/dp/B0DTKFZ662"
+  },
+  {
+    "id": "amz-pooper-scooper",
+    "name": "Pooper Scooper with Long Handle (Stainless)",
+    "price": { "amount": 0, "currency": "USD" },
+    "short": "Easy-clean pet waste scooper.",
+    "images": [
+      "assets/products/pooper-scooper/1.jpg"
+    ],
+    "video": "",
+    "details": "Durable stainless construction for outdoor use.",
+    "tags": ["pet", "outdoor"],
+    "externalUrl": "https://www.amazon.com/dp/B08YJ6MPSZ"
+  },
+  {
+    "id": "amz-unknown-b0f2m57ykv",
+    "name": "Assorted Household Item",
+    "price": { "amount": 0, "currency": "USD" },
+    "short": "See listing for details.",
+    "images": [
+      "assets/products/unknown-b0f2m57ykv/1.jpg"
+    ],
+    "video": "",
+    "details": "US/UK international trading item.",
+    "tags": ["usa", "import"],
+    "externalUrl": "https://www.amazon.com/dp/B0F2M57YKV"
+  }
+]
+
