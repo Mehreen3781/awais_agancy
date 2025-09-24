@@ -1,3 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awase Agency8™ - Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="site-header">
+      <nav class="navbar container">
+        <a class="brand" href="index.html" aria-label="Awase Agency8 Home">
+          <img class="brand-logo" src="https://img.icons8.com/emoji/96/gift-emoji.png" alt="Gift Box Logo" />
+          <span class="brand-name">Awase Agency8<sup>TM</sup></span>
+        </a>
+        <input type="checkbox" id="navToggle" class="nav-toggle" aria-label="Toggle navigation" />
+        <label for="navToggle" class="nav-burger" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </label>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop" data-filter="all">Shop</a></li>
+          <li><a href="#shop" data-filter="uk">UK Products</a></li>
+          <li><a href="#shop" data-filter="all">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="cart-link" href="#cart" aria-label="Cart">
+          <span class="cart-icon">🛒</span>
+          <span id="cartCount" class="cart-count">0</span>
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero / Intro -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Premium Gifts for Every Occasion</h1>
+          <p>
+            Humare client ki premium gifting brand <strong>Awase Agency8</strong> ke saath, aapko milti hai
+            stylish packaging, curated products, aur fast delivery. Perfect for birthdays, weddings, corporate events —
+            make every moment memorable.
+          </p>
+          <a href="#shop" class="btn btn-primary">Shop Now</a>
+        </div>
+        <div class="hero-media">
+          <img class="hero-image float-bounce" src="https://images.unsplash.com/photo-1512427691650-9943d09592a3?q=80&w=1200&auto=format&fit=crop" alt="Beautiful gift boxes" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <main id="shop" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Products</h2>
+          <p>Handpicked gifts — add to cart ya details dekhne ke liye view par click karein.</p>
+        </div>
+        <div id="productGrid" class="product-grid" aria-live="polite"></div>
+      </div>
+    </main>
+
+    <!-- Contact / Footer -->
+    <footer id="contact" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Contact</h3>
+          <p>
+            Questions? Collaboration? Order customization? Humein message karein.
+          </p>
+          <ul class="contact-list">
+            <li>Email: <a href="mailto:hello@awase-agency8.com">hello@awase-agency8.com</a></li>
+            <li>Phone: <a href="tel:+441234567890">+44 1234 567 890</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Address</h3>
+          <p>London, United Kingdom</p>
+        </div>
+        <div>
+          <h3>Follow</h3>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="TikTok">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div class="container copyright">
+        <p>© <span id="year"></span> Awase Agency8. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+  
+</html>
+
 <!doctype html>
 <html lang="en">
   <head>

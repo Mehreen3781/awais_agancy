@@ -1,0 +1,80 @@
+[
+  {
+    "id": "gift-box-deluxe",
+    "title": "Deluxe Gift Box",
+    "shortDescription": "Premium curated gift box with chocolates, candle, and card.",
+    "description": "Deluxe Gift Box mein aapko milti hai artisan chocolates, scented candle, premium greeting card, aur reusable keepsake box. Corporate gifting aur special occasions ke liye perfect.",
+    "price": 39.99,
+    "currency": "GBP",
+    "tag": "UK Favourite",
+    "tags": ["uk", "featured"],
+    "images": [
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1511936606692-5b3c2d2eac9b?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1512427691650-9943d09592a3?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=1200&auto=format&fit=crop"
+    ],
+    "video": "https://cdn.coverr.co/videos/coverr-gift-boxes-7207/1080p.mp4"
+  },
+  {
+    "id": "spa-relax-kit",
+    "title": "Spa Relax Kit",
+    "shortDescription": "Aromatherapy spa kit for ultimate relaxation.",
+    "description": "Relaxation lover ke liye essential set: bath salts, essential oils, face mask, aur soft towel.",
+    "price": 29.5,
+    "currency": "GBP",
+    "tag": "Bestseller",
+    "tags": ["featured"],
+    "images": [
+      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522336572468-97b06e8ef143?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aaea0?q=80&w=1200&auto=format&fit=crop"
+    ],
+    "video": ""
+  },
+  {
+    "id": "choco-luxe",
+    "title": "Choco Luxe Assortment",
+    "shortDescription": "Handcrafted chocolates in elegant packaging.",
+    "description": "Belgian-style handcrafted chocolates ka curated selection, gift-ready presentation ke saath.",
+    "price": 24.0,
+    "currency": "GBP",
+    "tags": ["uk"],
+    "images": [
+      "https://images.unsplash.com/photo-1545023817-37e27b4f8b7b?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1485808191679-5f86510691a0?q=80&w=1200&auto=format&fit=crop"
+    ],
+    "video": ""
+  },
+  {
+    "id": "tea-treasures",
+    "title": "Tea Treasures Box",
+    "shortDescription": "Gourmet teas with honey and infuser.",
+    "description": "Gourmet loose-leaf teas ka mix, raw honey aur stainless infuser ke saath — winter gifts ke liye ideal.",
+    "price": 18.75,
+    "currency": "GBP",
+    "tags": ["featured"],
+    "images": [
+      "https://images.unsplash.com/photo-1463797221720-6b07e6426c24?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1484904164512-1e1b9bd22d00?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1505572390945-3f4d84a6c8b3?q=80&w=1200&auto=format&fit=crop"
+    ],
+    "video": ""
+  },
+  {
+    "id": "scented-candle-pair",
+    "title": "Scented Candle Pair",
+    "shortDescription": "Two soy candles with long-lasting fragrance.",
+    "description": "Long-burning soy wax candles in complementary fragrances, minimalist jars mein.",
+    "price": 16.0,
+    "currency": "GBP",
+    "tags": ["uk", "budget"],
+    "images": [
+      "https://images.unsplash.com/photo-1514546222372-c41f1b2e0fd7?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1505577058444-a3dab90d4253?q=80&w=1200&auto=format&fit=crop"
+    ],
+    "video": ""
+  }
+]
+
