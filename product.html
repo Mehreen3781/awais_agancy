@@ -91,9 +91,31 @@
       } catch { cartCount.textContent = '0'; }
     }
 
-    function addToCart(productId) {
+    function getCurrencySymbol(currency) {
+      switch ((currency || '').toUpperCase()) {
+        case 'USD': return '$';
+        case 'GBP': return '£';
+        case 'EUR': return '€';
+        default: return '';
+      }
+    }
+
+    function getDisplayPrice(product) {
+      if (product.price && typeof product.price.amount === 'number') {
+        return `${getCurrencySymbol(product.price.currency)}${product.price.amount.toFixed(2)}`;
+      }
+      if (typeof product.priceGBP === 'number') {
+        return `£${product.priceGBP.toFixed(2)}`;
+      }
+      return '';
+    }
+
+    function addToCart(product) {
       const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-      cart.push({ productId, ts: Date.now() });
+      const firstImage = product.images?.[0] || '/assets/placeholder.svg';
+      const priceAmount = (product.price && typeof product.price.amount === 'number') ? product.price.amount : (typeof product.priceGBP === 'number' ? product.priceGBP : 0);
+      const currency = (product.price && product.price.currency) ? product.price.currency : (typeof product.priceGBP === 'number' ? 'GBP' : '');
+      cart.push({ productId: product.id, name: product.name, image: firstImage, price: priceAmount, currency, ts: Date.now() });
       localStorage.setItem('cart', JSON.stringify(cart));
       loadCartCount();
     }
@@ -103,7 +125,7 @@
 
     // Bind product info
     document.getElementById('pTitle').textContent = product.name;
-    document.getElementById('pPrice').textContent = `£${product.priceGBP.toFixed(2)}`;
+    document.getElementById('pPrice').textContent = getDisplayPrice(product);
     document.getElementById('pDetails').textContent = product.details;
     const tags = document.getElementById('pTags');
     product.tags?.forEach(t => {
@@ -160,7 +182,7 @@
     // Initialize with first slide
     slides.length ? renderMain(0) : (main.textContent = 'No media');
 
-    document.getElementById('addCart').addEventListener('click', () => addToCart(product.id));
+    document.getElementById('addCart').addEventListener('click', () => addToCart(product));
     loadCartCount();
   </script>
   <script src="/js/nav.js" type="module"></script>
