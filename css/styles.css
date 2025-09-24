@@ -21,6 +21,17 @@ img { display:block; max-width:100%; height:auto }
 .cart-link { position:relative; padding:6px 10px; border:1px solid #2a3240; border-radius:10px; }
 .cart-badge { position:absolute; top:-8px; right:-8px; background: var(--danger); color:#fff; font-weight:700; font-size:12px; width:20px; height:20px; display:grid; place-items:center; border-radius:999px; }
 
+/* Mobile nav toggle */
+.nav-toggle { display:none; background:transparent; border:1px solid #2a3240; color:#fff; border-radius:8px; padding:6px 10px }
+.nav-toggle span { display:block; width:20px; height:2px; background:#fff; margin:4px 0 }
+
+@media (max-width: 860px) {
+  .nav-toggle { display:block }
+  .nav-right { position:relative }
+  .nav-right ul { position:absolute; top:58px; right:0; background:#0f1420; border:1px solid #1f2630; border-radius:10px; padding:10px; display:none; flex-direction:column; width: 220px }
+  .nav-right.open ul { display:flex }
+}
+
 /* Hero */
 .hero { padding: 40px 20px 10px; background: radial-gradient(1200px 600px at 10% -10%, rgba(79,134,255,.25), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(124,58,237,.25), transparent 60%); }
 .hero-content { max-width: 1100px; margin: 0 auto; display:grid; grid-template-columns: 1.2fr 1fr; gap:30px; align-items:center; }
